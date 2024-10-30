@@ -10,7 +10,7 @@ DELIMITER ;
 DELIMITER //
 CREATE PROCEDURE spSelectProvidersDDL()
 BEGIN
-	select prov_id,prov_nombre
+	select prov_id,concat(prov_nit,' ',prov_nombre) AS nombre
     from tbl_proveedor;
 END//
 DELIMITER ;
